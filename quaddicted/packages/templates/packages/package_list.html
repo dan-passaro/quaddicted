@@ -60,7 +60,7 @@
 {%             for author in package.authors.all %}
 						<a href="?{% filter_by_author querydict author.slug %}" title="{% trans 'Show only this user\'s maps' %}">{{ author }}</a>{% if not forloop.last %}, {% endif %}
 {% empty %}
-						Unknown
+						{% trans 'Unknown' %}
 {%             endfor %}
 					</td>
 					<td>{{ package.created }}</td>

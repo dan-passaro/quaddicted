@@ -88,7 +88,7 @@
 					{% for author in package.authors.all %}
 						<a href="{% url 'packages:list' %}?author={{ author.slug }}" title="Show only this users packages">{{ author }}</a>{% if not forloop.last %}, {% endif %}
 					{% empty %}
-						Unknown
+						{% trans 'Unknown' %}
 					{% endfor %}
 					</dd>
 
